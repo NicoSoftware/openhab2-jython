@@ -4,7 +4,7 @@ from core import osgi, jsr223, JythonItemProvider
 from core.jsr223 import scope
 from core.log import logging, LOG_PREFIX
 
-log = logging.getLogger(LOG_PREFIX + ".items")
+log = logging.getLogger(LOG_PREFIX + ".core.items")
 
 __all__ = ["add", "remove"]
 

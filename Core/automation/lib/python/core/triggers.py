@@ -19,7 +19,7 @@ from core.log import logging, LOG_PREFIX
 
 from org.quartz.CronExpression import isValidExpression
 
-log = logging.getLogger(LOG_PREFIX + ".triggers")
+log = logging.getLogger(LOG_PREFIX + ".core.triggers")
 
 class ItemStateUpdateTrigger(Trigger):
     def __init__(self, itemName, state=None, triggerName=None):
@@ -98,6 +98,7 @@ class ThingEventTrigger(Trigger):
         })).build()
 
 EVERY_SECOND = "0/1 * * * * ?"
+EVERY_10_SECONDS = "0/10 * * * * ?"
 EVERY_MINUTE = "0 * * * * ?"
 EVERY_HOUR = "0 0 * * * ?"
 

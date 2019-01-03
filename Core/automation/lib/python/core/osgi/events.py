@@ -13,7 +13,7 @@ from core.jsr223 import scope
 from core.osgi import bundle_context
 from core.log import logging, LOG_PREFIX
 
-log = logging.getLogger(LOG_PREFIX + ".osgi.events")
+log = logging.getLogger(LOG_PREFIX + ".core.osgi.events")
 
 scope.scriptExtension.importPreset("RuleSupport")
 
@@ -28,7 +28,7 @@ def hashtable(*key_values):
     return ht
 
 class OsgiEventAdmin(object):
-    log = logging.getLogger(LOG_PREFIX + ".osgi.events.OsgiEventAdmin")
+    log = logging.getLogger(LOG_PREFIX + ".core.osgi.events.OsgiEventAdmin")
     
     _event_handler = None
     _event_listeners = []
